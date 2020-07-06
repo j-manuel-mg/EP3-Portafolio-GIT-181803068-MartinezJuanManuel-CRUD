@@ -1,0 +1,5 @@
+Dao\Consola.class
+Configuracion\Conexion.class
+Dao\Catalogo.class
+Dao\CatalogoBD.class
+Dao\ConsolaBD.class
