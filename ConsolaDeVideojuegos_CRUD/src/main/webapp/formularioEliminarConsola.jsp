@@ -14,8 +14,6 @@
     int idConsola = 0;
     if (request.getParameter("idConsola") != null) {
         idConsola = Integer.valueOf(request.getParameter("idConsola"));
-        
-        List<Consola> consolaId = new ConsolaBD().buscarConsola(idConsola);
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

@@ -19,9 +19,7 @@
         <%
             boolean executeUpdate;
             CatalogoBD marca = new CatalogoBD();
-            
             executeUpdate = marca.eliminarMarca(new Catalogo(Integer.parseInt(request.getParameter("idMarca"))));
-            
             if (executeUpdate) {
         %>
         

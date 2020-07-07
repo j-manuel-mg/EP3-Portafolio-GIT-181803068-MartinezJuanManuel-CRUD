@@ -14,7 +14,6 @@
     int idMarca = 0;
     if (request.getParameter("idMarca") != null) {
         idMarca = Integer.valueOf(request.getParameter("idMarca"));
-        List<Catalogo> marcaId = new CatalogoBD().buscarMarcaId(idMarca);
 
 %>
 
