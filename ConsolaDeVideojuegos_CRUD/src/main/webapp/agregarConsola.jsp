@@ -10,7 +10,7 @@
 <%
     boolean executeUpdate;
     ConsolaBD consola = new ConsolaBD();
-    executeUpdate = consola.agregarConsola(new Consola(request.getParameter("plataforma"), request.getParameter("modelo"), request.getParameter("almacenamiento"), request.getParameter("color"), Integer.parseInt(request.getParameter("precio")), Integer.parseInt(request.getParameter("marca"))));
+    executeUpdate = consola.agregarConsola(new Consola(request.getParameter("plataforma"), request.getParameter("modelo"), request.getParameter("almacenamiento"), request.getParameter("color"), Integer.parseInt(request.getParameter("precio")), Integer.parseInt(request.getParameter("marca")),Integer.parseInt(request.getParameter("stock")) ));
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

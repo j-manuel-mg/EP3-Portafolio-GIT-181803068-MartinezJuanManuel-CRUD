@@ -75,6 +75,12 @@
                 <br>
                 
                 <div class="col">
+                    <input type="number" class="form-control" placeholder="Stock" name="stock" min="0" required>
+                </div>
+                
+                <br>
+                
+                <div class="col">
                     <input type="submit" class="btn btn-success btn-block"   value="Agregar Consola de Videojuegos">
                 </div>
 

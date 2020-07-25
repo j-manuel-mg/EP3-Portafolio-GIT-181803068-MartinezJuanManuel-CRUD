@@ -76,14 +76,20 @@
                         <% for (Catalogo j : catalogo) {%>
                         <option value="<%=j.getIdMarca()%>"><%=j.getMarca()%></option>
                         <%if (i.getMarca().equals(j.getMarca())) {
-                            %>
-                            <option value="<%=j.getIdMarca()%>" selected="<%=j.getIdMarca()%>"><%=j.getMarca()%></option>
+                        %>
+                        <option value="<%=j.getIdMarca()%>" selected="<%=j.getIdMarca()%>"><%=j.getMarca()%></option>
                         <%
                             }%>
                         <%}%>
                     </select>
                 </div>
 
+                <br>
+                
+                <div class="col">
+                    <input type="number" class="form-control" value="<%=i.getStock()%>" name="stock" min="0" required>
+                </div>
+                
                 <br>
 
                 <div class="col">

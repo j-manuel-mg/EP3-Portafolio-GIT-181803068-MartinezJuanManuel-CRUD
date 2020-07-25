@@ -1,18 +1,14 @@
-<%-- 
-    Document   : index
-    Created on : 30 jun. 2020, 18:31:25
-    Author     : Juan Manuel
---%>
-<%@page import="java.util.List"%>
+
 <%@page import="Dao.ConsolaBD"%>
+<%@page import="java.util.List"%>
 <%@page import="Dao.Consola"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 
 <%
     List<Consola> consola = new ConsolaBD().listadoConsola();
 %>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -20,24 +16,22 @@
             table, th, td {
                 border: 1px solid black;
             }
-        </style>
+        </style>        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Base de Datos Consolas de Videojuegos </title>
+        <title>Vender Consola</title>
     </head>
     <body style="background-image: url(https://i.pinimg.com/originals/53/d5/f4/53d5f4a5a8632cfe3cdc470b5e1fbf2a.jpg)">
 
-        <br><h3 style="color: darkorange; text-align: center">CRUD Consolas de Videojuegos</h3><br>
+        <br><h3 style="color: darkorange; text-align: center">Vender videojuegos</h3><br>
 
         <div class="container">
-            
+
             <div class="col" >
-                <a  href="catalogo.jsp" style="margin: 3px" class="btn btn-primary float-left" >Consultar Catalogo</a>
-                <a  href="vender.jsp" style="margin: 3px" class="btn btn-primary float-left" >Vender Consola</a>
-                <a  href="formularioAgregarConsola.jsp" style="margin: 3px" class="btn btn-success float-right"> Agregar Consola </a>
+                <a  href="index.jsp" style="margin: 3px" class="btn btn-primary float-left" >Regresar al menu</a>
             </div>
-            
+
             <br><br>
-            
+
             <table class="table table-hover">
                 <thead class="thead-dark">
                     <tr>
@@ -66,8 +60,9 @@
                         <td><%=i.getMarca()%></td>
                         <td><%=i.getStock()%></td>
 
-                        <td> <a href="formularioEditarConsola.jsp?idConsola=<%=i.getIdConsola()%>" class="btn btn-warning btn-block" >Editar Consola</a></td>
-                        <td> <a href="formularioEliminarConsola.jsp?idConsola=<%=i.getIdConsola()%>" class="btn btn-danger btn-block">Eliminar Consola</a></td>
+                        <%if (i.getStock() > 0) {%>
+                        <td> <a href="NombreDelJSP.jsp?idConsola=<%=i.getIdConsola()%>" class="btn btn-danger btn-block">Vender consola</a></td>
+                        <%}%>
                     </tr>
                     <%
                         }

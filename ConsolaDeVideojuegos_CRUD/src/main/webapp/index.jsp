@@ -8,7 +8,7 @@
 <%@page import="Dao.Consola"%>
 
 <%
-    List<Consola> consola = new ConsolaBD().listadoConsolas();
+    List<Consola> consola = new ConsolaBD().listadoConsola();
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -26,13 +26,14 @@
     </head>
     <body style="background-image: url(https://i.pinimg.com/originals/53/d5/f4/53d5f4a5a8632cfe3cdc470b5e1fbf2a.jpg)">
 
-        <br><h3 style="color: darkorange; text-align: center">Registros de la Base de Datos Consolas de Videojuegos</h3><br>
+        <br><h3 style="color: darkorange; text-align: center">CRUD Consolas de Videojuegos</h3><br>
 
         <div class="container">
             
             <div class="col" >
-                <a  href="catalogo.jsp" class="btn btn-primary float-left" >Consultar Catalogo</a>
-                <a  href="formularioAgregarConsola.jsp" class="btn btn-success float-right"> Agregar Consola </a>
+                <a  href="catalogo.jsp" style="margin: 3px" class="btn btn-primary float-left" >Consultar Catalogo</a>
+                <a  href="vender.jsp" style="margin: 3px" class="btn btn-primary float-left" >Vender Consola</a>
+                <a  href="formularioAgregarConsola.jsp" style="margin: 3px" class="btn btn-success float-right"> Agregar Consola </a>
             </div>
             
             <br><br>
@@ -47,6 +48,7 @@
                         <th>Color</th>
                         <th>Precio</th>
                         <th>Marca</th>
+                        <th>Stock</th>
                         <th colspan="3" style="text-align: center">Acciones</th>
                     </tr>
                 </thead>
@@ -62,9 +64,10 @@
                         <td><%=i.getColor()%></td>
                         <td><%=i.getPrecio()%></td>
                         <td><%=i.getMarca()%></td>
+                        <td><%=i.getStock()%></td>
 
                         <td> <a href="formularioEditarConsola.jsp?idConsola=<%=i.getIdConsola()%>" class="btn btn-warning btn-block" >Editar Consola</a></td>
-                        <td> <a href="formularioEliminarConsola.jsp?idConsola=<%=i.getIdConsola()%>" class="btn btn-danger btm-block">Eliminar Consola</a></td>
+                        <td> <a href="formularioEliminarConsola.jsp?idConsola=<%=i.getIdConsola()%>" class="btn btn-danger btn-block">Eliminar Consola</a></td>
                     </tr>
                     <%
                         }

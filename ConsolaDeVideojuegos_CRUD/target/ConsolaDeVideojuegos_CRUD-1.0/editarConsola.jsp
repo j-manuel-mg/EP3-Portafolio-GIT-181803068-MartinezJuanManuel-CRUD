@@ -9,7 +9,7 @@
 <%
     boolean executeUpdate;
     ConsolaBD consola = new ConsolaBD();
-    executeUpdate = consola.editarConsola(new Consola(request.getParameter("plataforma"), request.getParameter("modelo"), request.getParameter("almacenamiento"), request.getParameter("color"), Integer.parseInt(request.getParameter("precio")), Integer.parseInt(request.getParameter("marca")), Integer.parseInt(request.getParameter("idConsola"))));
+    executeUpdate = consola.editarConsola(new Consola(request.getParameter("plataforma"), request.getParameter("modelo"), request.getParameter("almacenamiento"), request.getParameter("color"), Integer.parseInt(request.getParameter("precio")), Integer.parseInt(request.getParameter("marca")), Integer.parseInt(request.getParameter("stock")), Integer.parseInt(request.getParameter("idConsola"))));
 
 %>
 

@@ -22,17 +22,24 @@ public class Consola {
     private int idMarca;
     private String marca;
 
+    //Cantidad
+    private int stock;
+
     public Consola() {
 
     }
 
-    //idConsola
-    public Consola(int idConsola) {
-        this.idConsola = idConsola;
-    }
-    
-    //Contructor ---> Listado Consola
-    public Consola(int idConsola, String plataforma, String modelo, String almacenamiento, String color, int precio, String marca) {
+    //Contructor ---> Listado Consola index.jsp
+//    public Consola(int idConsola, String plataforma, String modelo, String almacenamiento, String color, int precio, String marca) {
+//        this.idConsola = idConsola;
+//        this.plataforma = plataforma;
+//        this.modelo = modelo;
+//        this.almacenamiento = almacenamiento;
+//        this.color = color;
+//        this.precio = precio;
+//        this.marca = marca;
+//    }
+    public Consola(int idConsola, String plataforma, String modelo, String almacenamiento, String color, int precio, String marca, int stock) {
         this.idConsola = idConsola;
         this.plataforma = plataforma;
         this.modelo = modelo;
@@ -40,18 +47,28 @@ public class Consola {
         this.color = color;
         this.precio = precio;
         this.marca = marca;
+        this.stock = stock;
     }
-    
+
     //Constructor ---> Agregar Consola 
-    public Consola(String plataforma, String modelo, String almacenamiento, String color, int precio, int idMarca) {
+//    public Consola(String plataforma, String modelo, String almacenamiento, String color, int precio, int idMarca) {
+//        this.plataforma = plataforma;
+//        this.modelo = modelo;
+//        this.almacenamiento = almacenamiento;
+//        this.color = color;
+//        this.precio = precio;
+//        this.idMarca = idMarca;
+//    }
+    public Consola(String plataforma, String modelo, String almacenamiento, String color, int precio, int idMarca, int stock) {
         this.plataforma = plataforma;
         this.modelo = modelo;
         this.almacenamiento = almacenamiento;
         this.color = color;
         this.precio = precio;
         this.idMarca = idMarca;
+        this.stock = stock;
     }
-    
+
     //Contructor ---> Buscar Consola
     public Consola(String plataforma, String modelo, String almacenamiento, String color, int precio, String marca) {
         this.plataforma = plataforma;
@@ -61,18 +78,42 @@ public class Consola {
         this.precio = precio;
         this.marca = marca;
     }
-    
+
+    public Consola(String plataforma, String modelo, String almacenamiento, String color, int precio, String marca, int stock) {
+        this.plataforma = plataforma;
+        this.modelo = modelo;
+        this.almacenamiento = almacenamiento;
+        this.color = color;
+        this.precio = precio;
+        this.marca = marca;
+        this.stock = stock;
+    }
+
     //Constructor ---> Editar Consola
-    public Consola(String plataforma, String modelo, String almacenamiento, String color, int precio, int  idMarca, int idConsola) {
+//    public Consola(String plataforma, String modelo, String almacenamiento, String color, int precio, int  idMarca, int idConsola) {
+//        this.plataforma = plataforma;
+//        this.modelo = modelo;
+//        this.almacenamiento = almacenamiento;
+//        this.color = color;
+//        this.precio = precio;
+//        this.idMarca = idMarca;
+//        this.idConsola = idConsola;
+//    }
+    public Consola(String plataforma, String modelo, String almacenamiento, String color, int precio, int idMarca, int stock, int idConsola) {
         this.plataforma = plataforma;
         this.modelo = modelo;
         this.almacenamiento = almacenamiento;
         this.color = color;
         this.precio = precio;
         this.idMarca = idMarca;
+        this.stock = stock;
         this.idConsola = idConsola;
     }
     
+    //Constructor ---> Eliminar Consola
+    public Consola(int idConsola) {
+        this.idConsola = idConsola;
+    }
 
     //Metodos
     public int getIdConsola() {
@@ -140,4 +181,12 @@ public class Consola {
         this.marca = marca;
     }
 
+    //Cantidad
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
 }
