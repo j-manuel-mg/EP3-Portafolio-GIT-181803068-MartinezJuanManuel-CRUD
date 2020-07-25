@@ -61,7 +61,7 @@
                         <td><%=i.getStock()%></td>
 
                         <%if (i.getStock() > 0) {%>
-                        <td> <a href="NombreDelJSP.jsp?idConsola=<%=i.getIdConsola()%>" class="btn btn-danger btn-block">Vender consola</a></td>
+                        <td> <a href="formularioVender.jsp?idConsola=<%=i.getIdConsola()%>" class="btn btn-danger btn-block">Vender consola</a></td>
                         <%}%>
                     </tr>
                     <%

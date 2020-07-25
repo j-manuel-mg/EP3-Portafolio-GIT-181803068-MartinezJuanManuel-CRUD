@@ -28,7 +28,7 @@
         <h3 style="color: darkorange; text-align: center">Agregar consola de videojuegos</h3><br>
 
         <div class="container">
-            <form action="agregarConsola.jsp" method="get">
+            <form action="agregarConsola.jsp" method="post">
                 <div class="col">
                     <input type="text" class="form-control" placeholder="Plataforma" name="plataforma" required>
                 </div>

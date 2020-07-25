@@ -39,38 +39,44 @@
 
             <%for (Consola i : consolaId) {%>
 
-            <form action="editarConsola.jsp" method="get">
+            <form action="editarConsola.jsp" method="post">
                 <div class="col">
+                    <label> Plataforma: </label>
                     <input type="text" class="form-control" value="<%=i.getPlataforma()%>" name="plataforma" required>
                 </div>
 
                 <br>
 
                 <div class="col">
+                    <label> Modelo: </label>
                     <input type="text" class="form-control" value="<%=i.getModelo()%>" name="modelo" required>
                 </div>
 
                 <br>
 
                 <div class="col">
+                    <label> Almacenamiento: </label>
                     <input type="text" class="form-control" value="<%=i.getAlmacenamiento()%>" name="almacenamiento" required>
                 </div>
 
                 <br>
 
                 <div class="col">
+                    <label> Color: </label>
                     <input type="text" class="form-control" value="<%=i.getColor()%>" name="color" required>
                 </div>
 
                 <br>
 
                 <div class="col">
+                    <label> Precio: </label>
                     <input type="number" class="form-control" value="<%=i.getPrecio()%>" name="precio" required>
                 </div>
 
                 <br>
 
                 <div class="col">
+                    <label> Marca: </label>
                     <select class="form-control" name="marca" value="<%=i.getMarca()%>" required>
                         <option value=""> Seleccione una marca</option>
                         <% for (Catalogo j : catalogo) {%>
@@ -87,6 +93,7 @@
                 <br>
                 
                 <div class="col">
+                    <label> Stock: </label>
                     <input type="number" class="form-control" value="<%=i.getStock()%>" name="stock" min="0" required>
                 </div>
                 

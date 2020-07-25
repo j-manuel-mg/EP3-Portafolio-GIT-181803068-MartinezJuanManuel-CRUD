@@ -20,7 +20,7 @@
         <h3 style="color: darkorange; text-align: center">Agregar Marca</h3><br>
 
         <div class="container">
-            <form action="agregarMarca.jsp" method="get">
+            <form action="agregarMarca.jsp" method="post">
                 <div class="col">
                     <input type="text" class="form-control" placeholder="Marca" name="marca" required>
                 </div>
