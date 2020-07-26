@@ -24,7 +24,7 @@
 
         <br>
         <br>
-        
+
         <h3 style="color: darkorange; text-align: center">Agregar consola de videojuegos</h3><br>
 
         <div class="container">
@@ -63,7 +63,7 @@
                     <select class="form-control" name="marca" required>
                         <option value=""> Seleccione una marca</option>
                         <%
-                            for (Catalogo j: catalogo ) {
+                            for (Catalogo j : catalogo) {
                         %>
                         <option value="<%=j.getIdMarca()%>"><%=j.getMarca()%></option>
                         <%
@@ -71,15 +71,15 @@
                         %>
                     </select>
                 </div>
-                    
+
                 <br>
-                
+
                 <div class="col">
                     <input type="number" class="form-control" placeholder="Stock" name="stock" min="0" required>
                 </div>
-                
+
                 <br>
-                
+
                 <div class="col">
                     <input type="submit" class="btn btn-success btn-block"   value="Agregar Consola de Videojuegos">
                 </div>

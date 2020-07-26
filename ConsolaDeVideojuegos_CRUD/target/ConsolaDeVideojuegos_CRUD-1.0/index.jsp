@@ -69,9 +69,7 @@
                         <td> <a href="formularioEditarConsola.jsp?idConsola=<%=i.getIdConsola()%>" class="btn btn-warning btn-block" >Editar Consola</a></td>
                         <td> <a href="formularioEliminarConsola.jsp?idConsola=<%=i.getIdConsola()%>" class="btn btn-danger btn-block">Eliminar Consola</a></td>
                     </tr>
-                    <%
-                        }
-                    %>
+                    <%}%>
                 </tbody>
             </table>
 

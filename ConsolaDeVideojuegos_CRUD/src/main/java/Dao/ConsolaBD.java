@@ -46,7 +46,7 @@ public class ConsolaBD {
 
 //    private static final String editarConsola = "UPDATE consola SET plataforma = ?, modelo = ?, almacenamiento = ?, color = ?, precio = ?, id_marca = ? WHERE id_consola = ?";
     private static final String editarConsola = "UPDATE consola SET plataforma = ?, modelo = ?, almacenamiento = ?, color = ?, precio = ?, id_marca = ?, stock = ? WHERE id_consola = ?";
-    
+
     private static final String eliminarConsola = "DELETE FROM consola WHERE id_consola = ?";
 
     /*
@@ -169,4 +169,17 @@ public class ConsolaBD {
         }
     }
 
+    private static final String editarStock= "UPDATE consola SET stock = ? WHERE id_consola = ?";
+    
+    public boolean editarStock(Consola consola) throws SQLException {
+        this.stmt = this.conexion.prepareStatement(this.editarStock);
+        this.stmt.setInt(1, consola.getStock());
+        this.stmt.setInt(2, consola.getIdConsola());
+        if (this.stmt.executeUpdate() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
 }

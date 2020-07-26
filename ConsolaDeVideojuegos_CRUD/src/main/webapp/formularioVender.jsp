@@ -20,16 +20,20 @@
         <h3 style="color: darkorange; text-align: center">¿Cuantas consolas de videojuegos quiere?</h3><br>
 
         <div class="container">
-            <form action="" method="post">
+            <form action="venderConsola.jsp" method="post">
+                
+                <div class="col">
+                    <input type="hidden" value="<%=request.getParameter("idConsola")%>" name="idConsola" class="form-control" readonly>
+                </div>
 
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Cantidad" name="cantidad" required>
+                    <input type="number" class="form-control" placeholder="Cantidad" name="cantidad" min="0" required>
                 </div>
 
                 <br>
 
                 <div class="col">
-                    <input type="submit" class="btn btn-success btn-block"   value="Vender Consola">
+                    <input type="submit" class="btn btn-success btn-block"   value="Agregar al carrito">
                 </div>
 
                 <br>

@@ -110,6 +110,20 @@ public class Consola {
         this.idConsola = idConsola;
     }
     
+    //Constructor modificar Stock
+    public Consola(int stock, int idConsola){
+        this.stock = stock;
+        this.idConsola = idConsola;
+    }
+    
+    //Metodo restar de venderConsola.jsp
+    public int resta(int numero1, int numero2){
+        
+        int resta = numero1 - numero2;
+                
+        return resta;
+    }
+    
     //Constructor ---> Eliminar Consola
     public Consola(int idConsola) {
         this.idConsola = idConsola;
